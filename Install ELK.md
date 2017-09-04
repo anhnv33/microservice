@@ -74,7 +74,19 @@ Open the Kibana configuration file for editing:
         sudo vi /opt/kibana/config/kibana.yml
     ```
     
+Find the line that specifies server.host, and replace the IP address ("0.0.0.0" by default) with "localhost":
 
-    
+| kibana.yml excerpt (updated) |
+|-------------------|
+| server.host: "localhost" |
+Save and exit.
+
+Start the Kibana service, and enable it:
+
+```
+$ sudo systemctl start kibana
+$ sudo chkconfig kibana on
+```
+
    [elk-instal]: <https://www.digitalocean.com/community/tutorials/how-to-install-elasticsearch-logstash-and-kibana-elk-stack-on-centos-7>
    
