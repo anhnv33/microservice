@@ -41,6 +41,14 @@ Find the line that specifies network.host, uncomment it, and replace its value w
     ```
         network.host: localhost
     ```
+Save and exit _elasticsearch.yml_.
+
+## Start Elasticsearch
+    $ sudo systemctl start elasticsearch
+Run bellow command to start Elasticsearch automatically on boot up:
+    ```
+        $ sudo systemctl enable elasticsearch
+    ```    
     
    [elk-instal]: <https://www.digitalocean.com/community/tutorials/how-to-install-elasticsearch-logstash-and-kibana-elk-stack-on-centos-7>
    
