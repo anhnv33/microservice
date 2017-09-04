@@ -43,12 +43,38 @@ Find the line that specifies network.host, uncomment it, and replace its value w
     ```
 Save and exit _elasticsearch.yml_.
 
-## Start Elasticsearch
+## Step 5: Start Elasticsearch
     $ sudo systemctl start elasticsearch
 Run bellow command to start Elasticsearch automatically on boot up:
     ```
         $ sudo systemctl enable elasticsearch
     ```    
+    
+# Install Kibana
+
+## Step 1: Create and edit a new yum repository file for Kibana
+    $ sudo vi /etc/yum.repos.d/kibana.repo
+Add the following repository configuration:
+
+| /etc/yum.repos.d/kibana.repo |
+| ------ |
+| [kibana-4.4] |
+| name=Kibana repository for 4.4.x packages |
+| baseurl=http://packages.elastic.co/kibana/4.4/centos |
+| gpgcheck=1 |
+| gpgkey=http://packages.elastic.co/GPG-KEY-elasticsearch |
+| enabled=1 |
+
+Save and exit.
+
+## Step 2: Install Kibana
+    $ sudo yum -y install kibana
+Open the Kibana configuration file for editing:
+    ```
+        sudo vi /opt/kibana/config/kibana.yml
+    ```
+    
+
     
    [elk-instal]: <https://www.digitalocean.com/community/tutorials/how-to-install-elasticsearch-logstash-and-kibana-elk-stack-on-centos-7>
    
