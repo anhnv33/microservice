@@ -88,5 +88,22 @@ $ sudo systemctl start kibana
 $ sudo chkconfig kibana on
 ```
 
+# Install Logstash
+### Step 1: Create and edit a new Yum repository file for Logstash
+    $ sudo vi /etc/yum.repos.d/logstash.repo
+Add the following repository configuration:
+| /etc/yum.repos.d/logstash.repo |
+|-------------------|
+| [logstash-2.2] |
+| name=logstash repository for 2.2 packages |
+| baseurl=http://packages.elasticsearch.org/logstash/2.2/centos |
+| gpgcheck=1 |
+| gpgkey=http://packages.elasticsearch.org/GPG-KEY-elasticsearch |
+| enabled=1 |
+Save and exit
+### Step 2: Install Logstash
+    $ sudo yum -y install logstash
+
+
    [elk-instal]: <https://www.digitalocean.com/community/tutorials/how-to-install-elasticsearch-logstash-and-kibana-elk-stack-on-centos-7>
    
