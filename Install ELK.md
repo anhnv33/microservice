@@ -100,6 +100,7 @@ Add the following repository configuration:
 | gpgcheck=1 |
 | gpgkey=http://packages.elasticsearch.org/GPG-KEY-elasticsearch |
 | enabled=1 |
+
 Save and exit
 ### Step 2: Install Logstash
     $ sudo yum -y install logstash
