@@ -92,6 +92,7 @@ $ sudo chkconfig kibana on
 ### Step 1: Create and edit a new Yum repository file for Logstash
     $ sudo vi /etc/yum.repos.d/logstash.repo
 Add the following repository configuration:
+
 | /etc/yum.repos.d/logstash.repo |
 |-------------------|
 | [logstash-2.2] |
