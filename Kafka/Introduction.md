@@ -6,6 +6,7 @@ This document provides informaion about the following:
 **Reference**:
 
 [What is Kafka?][what-is-kafka]
+[Kafka Architecture][kafka-architecture]
 
 ## 1. What is Kafka?
 ### what is Kafka
@@ -97,3 +98,4 @@ _Zookeeper provides an in-sync view of Kafka Cluster configuration._
 - If one Kafka Broker goes down, then the Kafka Broker which is an ISR (in-sync replica) can serve data
 
 [what-is-kafka]: http://cloudurable.com/blog/what-is-kafka/index.html
+[kafka-architecture]: http://cloudurable.com/blog/kafka-architecture/index.html
