@@ -90,4 +90,10 @@ _Zookeeper provides an in-sync view of Kafka Cluster configuration._
 - For failover, you want to start with at least three to five brokers. 
 - A Kafka cluster can have, 10, 100, or 1,000 brokers in a cluster if needed.
 
+**Kafka Cluster, Failover, ISRs**
+- Each node in Kafka cluster is called a Kafka Broker
+- Topic partitions can be replicated across multiple nodes for failover
+- The topic should have a replication factor greater than 1 (2, or 3)
+- If one Kafka Broker goes down, then the Kafka Broker which is an ISR (in-sync replica) can serve data
+
 [what-is-kafka]: http://cloudurable.com/blog/what-is-kafka/index.html
