@@ -4,6 +4,8 @@ Created by AnhNV Created Date: 18/10/2017
 This document provides informaion about the following:
 
 **Reference**:
+[What is Kafka?][what-is-kafka]
+
 
 ### what is Kafka
 * More than 1/3 of all Fortune 500 companies use Kafka
@@ -40,3 +42,4 @@ Kafka gets used for stream processing, website activity tracking, metrics collec
 - Kafka ecosystem also providers REST proxy allows easy integration via HTTP and JSON
 
 
+[what-is-kafka]: http://cloudurable.com/blog/what-is-kafka/index.html
