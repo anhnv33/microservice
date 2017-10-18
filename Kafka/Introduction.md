@@ -54,6 +54,29 @@ Kafka Cluster consists of many Kafka Brokers on many server
 >Kafka use **ZooKeeper** to manage the cluster. ZooKeeper is used to coordinate the broker/cluster topology. Zookeeper is a consistent file system for configuration information.
 
 **Core Kafka**
-
+![](https://user-images.githubusercontent.com/14268190/31709416-26de7e0e-b41c-11e7-90fc-a458455ea2d7.png)
+| **Input Systems:** | **Not Part of Core** |
+| ------ | ---------- |
+| Log Aggregation | Schema Registry
+| Metrics | Avro |
+| KPIs | Kafka REST Proxy| 
+| Batch imports | Kafka Connect
+| Audit trail | Kafka Streams
+| User activity logs |
+| Web logs |
+**Input Systems:**
+    - Log Aggregation
+    - Metrics
+    - KPIs
+    - Batch imports
+    - Audit trail
+    - User activity logs
+    - Web logs
+    **Not Part of Core**
+    - Schema Registry
+    - Avro
+    - Kafka REST Proxy
+    - Kafka Connect
+    - Kafka Streams
 
 [what-is-kafka]: http://cloudurable.com/blog/what-is-kafka/index.html
