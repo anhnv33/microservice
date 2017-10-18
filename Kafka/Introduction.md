@@ -31,3 +31,12 @@ Kafka gets used for stream processing, website activity tracking, metrics collec
 - It provides preserved ordering at shard level (Kafka Topic Partition)
 - The most important reason Kafka is popular is Kafka’s exceptional performance
 
+### Kafka Streaming Architecture Diagram
+![](https://user-images.githubusercontent.com/14268190/31706889-b4c3701a-b414-11e7-87d8-95cb52caab01.png)
+
+### Kafka is Polygot
+- Kafka communication from clients and servers uses a wire protocol over **TCP** that is versioned and documented
+- Can use more languages: C#, java, C, Python, Ruby,…
+- Kafka ecosystem also providers REST proxy allows easy integration via HTTP and JSON
+
+
