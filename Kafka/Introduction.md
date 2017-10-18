@@ -73,7 +73,11 @@ _Zookeeper provides an in-sync view of Kafka Cluster configuration._
 - Kafka appends records from producer to the end of topic log
 - Topic log consists of many partitions that are spread over multiple files which can be spread on multiple Kafka cluster nodes
 - Consumers read from Kafka topics at their cadence and can pick where they are (offset) in the topic log
-- 
+- Each consumer group tracks offset from where they left off reading
+- Kafka distributes topic log partitions on different nodes in a cluster for high performance with horizontal scalability
+- Topic log partitions are Kafka way to shard reads and writes to the topic log
+- Partitions are needed to have multiple consumers in a consumer group work at the same time
+- Kafka replicates partitions to many nodes to provide failover.
 
 
 [what-is-kafka]: http://cloudurable.com/blog/what-is-kafka/index.html
