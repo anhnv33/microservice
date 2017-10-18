@@ -51,7 +51,7 @@ Kafka Cluster consists of many Kafka Brokers on many server
 
 **Architecture: Topics, Producers and Consumers**
 ![](https://user-images.githubusercontent.com/14268190/31708153-666cf568-b418-11e7-9442-d279939a0d27.png)
-Kafka use **ZooKeeper** to manage the cluster. ZooKeeper is used to coordinate the broker/cluster topology. Zookeeper is a consistent file system for configuration information.
+>Kafka use **ZooKeeper** to manage the cluster. ZooKeeper is used to coordinate the broker/cluster topology. Zookeeper is a consistent file system for configuration information.
 
 **Core Kafka**
 
