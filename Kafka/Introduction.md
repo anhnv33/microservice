@@ -6,6 +6,7 @@ This document provides informaion about the following:
 **Reference**:
 
 [What is Kafka?][what-is-kafka]
+
 [Kafka Architecture][kafka-architecture]
 
 ## 1. What is Kafka?
