@@ -55,16 +55,7 @@ Kafka Cluster consists of many Kafka Brokers on many server
 
 **Core Kafka**
 ![](https://user-images.githubusercontent.com/14268190/31709416-26de7e0e-b41c-11e7-90fc-a458455ea2d7.png)
-| **Input Systems:** | **Not Part of Core** |
-| ------ | ---------- |
-| Log Aggregation | Schema Registry
-| Metrics | Avro |
-| KPIs | Kafka REST Proxy| 
-| Batch imports | Kafka Connect
-| Audit trail | Kafka Streams
-| User activity logs |
-| Web logs |
-**Input Systems:**
+>**Input Systems:**
     - Log Aggregation
     - Metrics
     - KPIs
@@ -78,5 +69,17 @@ Kafka Cluster consists of many Kafka Brokers on many server
     - Kafka REST Proxy
     - Kafka Connect
     - Kafka Streams
+    **Apache Kafka Core**
+    - Server/Broker
+    - Scripts to start libs
+    - Scripts to start up Zookeeper
+    - Utils to create topics
+    - Utils to monitor stats
+    - Analytics
+    - Databases
+    - Machine Learning
+    - Dashboards
+    - Indexed for Search
+    - Business Intelligence
 
 [what-is-kafka]: http://cloudurable.com/blog/what-is-kafka/index.html
