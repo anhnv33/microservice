@@ -63,6 +63,14 @@ _Kafka uses Zookeeper to manage service discovery for Kafka Brokers that form th
 _Zookeeper sends changes of the topology to Kafka, so each node in cluster knows when a new broker joined, a Broker died, a topic was removed or a topic was added, etc._
 _Zookeeper provides an in-sync view of Kafka Cluster configuration._
 
+**Kafka Producer, Consumer, Topic details**
+
+- Kafka producers write to Topics, Kafka consumers read from Topics
+- A Topic is associated with a log which is data structure on disk
+- Kafka appends records from producer to the end of topic log
+- Topic log consists of many partitions that are spread over multiple files which can be spread on multiple Kafka cluster nodes
+- Consumers read from Kafka topics at their cadence and can pick where they are (offset) in the topic log
+- 
 
 
 [what-is-kafka]: http://cloudurable.com/blog/what-is-kafka/index.html
