@@ -79,5 +79,6 @@ _Zookeeper provides an in-sync view of Kafka Cluster configuration._
 - Partitions are needed to have multiple consumers in a consumer group work at the same time
 - Kafka replicates partitions to many nodes to provide failover.
 
+![](http://cloudurable.com/images/kafka-architecture-topic-partition-consumer-group-offset-producers.png)
 
 [what-is-kafka]: http://cloudurable.com/blog/what-is-kafka/index.html
