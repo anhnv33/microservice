@@ -3,6 +3,9 @@ Created by AnhNV Created Date: 18/10/2017
 
 This document provides informaion about the following:
 
+- Introduction about Kafka: what, why, who
+- Kafka Architecture: all component in Kafka Architecture
+
 **Reference**:
 
 [What is Kafka?][what-is-kafka]
