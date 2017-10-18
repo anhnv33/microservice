@@ -6,7 +6,7 @@ This document provides informaion about the following:
 **Reference**:
 [What is Kafka?][what-is-kafka]
 
-
+## 1. What is Kafka?
 ### what is Kafka
 * More than 1/3 of all Fortune 500 companies use Kafka
 * Include the top ten travel companies, 7 of top ten banks, 8 of top ten insurance companies, 9 of top ten telecom companies, and much more
@@ -40,6 +40,20 @@ Kafka gets used for stream processing, website activity tracking, metrics collec
 - Kafka communication from clients and servers uses a wire protocol over **TCP** that is versioned and documented
 - Can use more languages: C#, java, C, Python, Ruby,…
 - Kafka ecosystem also providers REST proxy allows easy integration via HTTP and JSON
+
+## 2. Kafka Architecture
+> Kafka consists of Records, Topics, Consumers, Producers, Brokers, Logs, Partitions, and Clusters. Records can have key (optional), value and timestamp
+Kafka Topic is a stream of records ("/orders", "/user-signups"). Topic is as a feed name. A Topic has a Log which is the topic's storage on disk. A Topic Log is broken up into partitions and segments.
+The Kafka Producer API is used to produce streams of data records.
+The Kafka Consumer API is used to comsume a stream of records from Kafka.
+A Broker is a Kafka server that runs in a Kafka Cluster. Kafka Brokers form a cluster.
+Kafka Cluster consists of many Kafka Brokers on many server
+
+**Architecture: Topics, Producers and Consumers**
+![](https://user-images.githubusercontent.com/14268190/31708153-666cf568-b418-11e7-9442-d279939a0d27.png)
+Kafka use **ZooKeeper** to manage the cluster. ZooKeeper is used to coordinate the broker/cluster topology. Zookeeper is a consistent file system for configuration information.
+
+**Core Kafka**
 
 
 [what-is-kafka]: http://cloudurable.com/blog/what-is-kafka/index.html
