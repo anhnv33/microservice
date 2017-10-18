@@ -4,6 +4,7 @@ Created by AnhNV Created Date: 18/10/2017
 This document provides informaion about the following:
 
 **Reference**:
+
 [What is Kafka?][what-is-kafka]
 
 ## 1. What is Kafka?
