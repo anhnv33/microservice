@@ -12,3 +12,10 @@ This document provides informaion about the following:
 
 ### why Kafka
 - Kafka often gets used in real-time streaming data architectures to provide real-time analytics
+- Since kafka is a fast, scalable, durable, and fault-tolerant publish-subscribe messaging system
+- Kafka is used in case where JMS, RabbitMQ, and AMQP may not even be considered due to volume and responsiveness
+- Kafka has higher throughput, reliability and replication characteristics which make it possible for things like tracking service calls or track IOT sensor data
+
+### Kafka use cases
+Kafka gets used for stream processing, website activity tracking, metrics collection and monitoring, log aggregation, real-time analytics, CEP, ingesting data into Spark, ingesting data into Hadoop, CQRS, replay messages, error recovery (microservices)
+
