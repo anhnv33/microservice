@@ -57,6 +57,7 @@ Kafka Cluster consists of many Kafka Brokers on many server
 ![](https://user-images.githubusercontent.com/14268190/31711178-8932437e-b421-11e7-8db2-f1668103d602.png)
 
 **Kafka needs Zookeeper**
+
 _Kafka uses Zookeeper to do leadership election of Kafka Broker and Topic Partition pairs._
 _Kafka uses Zookeeper to manage service discovery for Kafka Brokers that form the cluster._
 _Zookeeper sends changes of the topology to Kafka, so each node in cluster knows when a new broker joined, a Broker died, a topic was removed or a topic was added, etc._
