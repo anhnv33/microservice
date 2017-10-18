@@ -81,4 +81,12 @@ _Zookeeper provides an in-sync view of Kafka Cluster configuration._
 
 ![](http://cloudurable.com/images/kafka-architecture-topic-partition-consumer-group-offset-producers.png)
 
+**Kafka Brokers**
+
+- A Kafka cluster is made up of multiple Kafka Brokers
+- Earch Kafka Broker has a unique ID
+- Kafka Brokers contain topic log partitions
+- For failover, you want to start with at least three to five brokers. 
+- A Kafka cluster can have, 10, 100, or 1,000 brokers in a cluster if needed.
+
 [what-is-kafka]: http://cloudurable.com/blog/what-is-kafka/index.html
