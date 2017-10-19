@@ -37,4 +37,16 @@ The partitions in the log serve several purposes.
 - **First, they allow the log to scale beyond a size that will fit on a single server.** Each individual partition must fit on the servers that host it, but a topic may have many partitions so it can handle an arbitrary amount of data
 - Second they act as the unit of parallelism—more on that in a bit.
 
+**Distribution**
 
+The partitions of the log are distributed over the servers in the Kafka cluster with each server handling data and requests for a share of the partitions. Each partition is replicated across a configurable number of servers for fault tolerance.
+
+Each partition has one server which acts as the "leader" and zero or more servers which act as "followers". The leader handles all read and write requests for the partition while the followers passively replicate the leader. If the leader fail, one of the followers will automatically become the new leader.
+
+**Producers**
+
+Producers publish data to the topics of their choice. The producer is responsible for choosing which record to assign to which partition within the topic.
+
+**Consumers**
+
+Consumers
