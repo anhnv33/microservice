@@ -26,6 +26,7 @@ A topic is a category or feed name to which records are published. Topics in Kaf
 
 For each topic, the Kafka cluster maintains a partitioned log that looks like this:
 ![image](https://user-images.githubusercontent.com/14268190/31761248-7966a410-b4e1-11e7-931b-6760b7163139.png)
+
 The records in the partitions are each assigned a sequential id number called the offset that uniquely identifies each record within the partition.
 
 The Kafka cluster retains all published records—whether or not they have been consumed—using a configurable retention period. For example, if the retention policy is set to two days, then for the two days after a record is published, it is available for consumption, after which it will be discarded to free up space. Kafka's performance is effectively constant with respect to data size so storing data for a long time is not a problem.
