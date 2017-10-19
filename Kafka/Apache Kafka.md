@@ -33,4 +33,8 @@ The Kafka cluster retains all published records—whether or not they have been 
 
 The consumer can control the offset in metadata retained. The position (offset) can change by consumer. For example a consumer can reset to an older offset to reprocess data from the past or skip ahead to the most recent record and start consuming from "now".
 
+The partitions in the log serve several purposes. 
+- **First, they allow the log to scale beyond a size that will fit on a single server.** Each individual partition must fit on the servers that host it, but a topic may have many partitions so it can handle an arbitrary amount of data
+- Second they act as the unit of parallelism—more on that in a bit.
+
 
