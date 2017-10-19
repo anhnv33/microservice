@@ -1,1 +1,28 @@
+# Apache Kafka
+Created by AnhNV Created Date: 19/10/2017
 
+This document provides informaion about the following:
+
+- Introduction of Kafka
+
+**Reference**:
+
+
+## 1. Introduction
+
+A few concepts:
+- Kafka is run as a cluster on one or more servers
+- The Kafka cluster stores streams of records in categories called topics
+- Each record consists of a key, a value, and a timestamp
+
+Kafka has four core APIs:
+- The Producer API allows an application to publish a stream of records to one or more Kafka topics
+- The Consumer API allows an application to subscribe to one or more topics and process the stream of records produced to them
+- The Streams API allows an application to act as a stream processor, consuming an input stream from one or more topics and producing an output stream to one or more output topics, effectively transforming the input streams to output streams
+- The Connector API allows building and running reusable producers or consumers that connect Kafka topics to existing applications or data systems. For example, a connector to a relational database might capture every change to a table.
+
+**Topics and Logs**
+A topic is a category or feed name to which records are published. Topics in Kafka are always multi-subscriber; that is, a topic can have zero, one, or many consumers that subscribe to the data written to it
+
+For each topic, the Kafka cluster maintains a partitioned log that looks like this:
+![image](https://user-images.githubusercontent.com/14268190/31761248-7966a410-b4e1-11e7-931b-6760b7163139.png)
