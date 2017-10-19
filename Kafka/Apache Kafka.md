@@ -30,3 +30,7 @@ For each topic, the Kafka cluster maintains a partitioned log that looks like th
 The records in the partitions are each assigned a sequential id number called the offset that uniquely identifies each record within the partition.
 
 The Kafka cluster retains all published records—whether or not they have been consumed—using a configurable retention period. For example, if the retention policy is set to two days, then for the two days after a record is published, it is available for consumption, after which it will be discarded to free up space. Kafka's performance is effectively constant with respect to data size so storing data for a long time is not a problem.
+
+The consumer can control the offset in metadata retained. The position (offset) can change by consumer. For example a consumer can reset to an older offset to reprocess data from the past or skip ahead to the most recent record and start consuming from "now".
+
+
