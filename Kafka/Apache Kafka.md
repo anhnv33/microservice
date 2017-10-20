@@ -53,4 +53,10 @@ Logical name for 1 or more consumers.
 
 Message consumption is load balanced across all consumers in a group.
 
+**Delivery guarantees**
+
+    Producer
+        - Async (No guarantee)
+        - Committed to Leader
+
 
