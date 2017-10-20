@@ -50,6 +50,7 @@ Producers publish data to the topics of their choice. The producer is responsibl
 **Consumers**
 
 Logical name for 1 or more consumers.
+
 Message consumption is load balanced across all consumers in a group.
 
 
