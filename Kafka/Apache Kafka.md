@@ -58,5 +58,10 @@ Message consumption is load balanced across all consumers in a group.
     Producer
         - Async (No guarantee)
         - Committed to Leader
+        - Committed to Leader and Quorum
+
+    Consumer
+        - At-least-once (default)
+        - At-most-once
 
 
