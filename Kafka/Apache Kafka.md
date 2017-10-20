@@ -47,6 +47,6 @@ Each partition has one server which acts as the "leader" and zero or more server
 
 Producers publish data to the topics of their choice. The producer is responsible for choosing which record to assign to which partition within the topic.
 
-**Consumers**
+**Devoxx**
 
-Consumers
+
