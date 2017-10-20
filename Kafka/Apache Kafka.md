@@ -68,6 +68,9 @@ Message consumption is load balanced across all consumers in a group.
     
 **Cool feature**    
 
+- Log compaction
+- Disk not Heap
+- Pagecache to Socket
 
 
 
