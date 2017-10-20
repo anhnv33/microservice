@@ -63,5 +63,11 @@ Message consumption is load balanced across all consumers in a group.
     Consumer
         - At-least-once (default)
         - At-most-once
+        - Effectively-once
+        - Exactly Once (Maybe)
+    
+**Cool feature**    
+
+
 
 
