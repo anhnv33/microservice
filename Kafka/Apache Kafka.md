@@ -72,5 +72,10 @@ Message consumption is load balanced across all consumers in a group.
 - Disk not Heap
 - Pagecache to Socket
 - Balanced Partitions & Leaders
+- Producer & Consumer Quotas
+- Heroku Kafka
 
+**Basic Connection**
+
+![image](https://user-images.githubusercontent.com/14268190/31810791-30e33070-b5a7-11e7-8a72-91bf2260853f.png)
 
