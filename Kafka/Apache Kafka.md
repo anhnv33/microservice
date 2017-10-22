@@ -75,7 +75,14 @@ Message consumption is load balanced across all consumers in a group.
 - Producer & Consumer Quotas
 - Heroku Kafka
 
-**Basic Connection**
+**Basics Connections**
 
 ![image](https://user-images.githubusercontent.com/14268190/31810791-30e33070-b5a7-11e7-8a72-91bf2260853f.png)
+
+**Kafka for Stream Processing**
+
+In Kafka a stream processor is anything that takes continual streams of data from input topics, performs some processing on this input, and produces continual streams of data to output topics. Kafka provides a fully integrated [Streams API](https://kafka.apache.org/documentation/streams/)
+
+
+
 
