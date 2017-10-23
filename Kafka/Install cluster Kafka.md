@@ -47,4 +47,4 @@ This document provides informaion about the following:
 - [ ] Start Kafka on each machine one by one:
     - `bin/kafka-server-start.sh config/server.properties`
 
-[kafka-multiple-setup]:(http://www.techburps.com/misc/multi-broker-apache-kafka-cluster-setup/64)
+[kafka-multiple-setup]: http://www.techburps.com/misc/multi-broker-apache-kafka-cluster-setup/64
