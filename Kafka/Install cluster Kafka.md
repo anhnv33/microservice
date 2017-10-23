@@ -32,4 +32,19 @@ This document provides informaion about the following:
 - [ ] Start ZooKeeper in all nodes one by one, using following command: `bin/zkServer.sh start conf/zoo.cfg`
 - [ ] Check log file: `tail -f zookeeper.out`
 
+**2. Apache Kafka - Cluster setup**
+
+- [ ] Download and unzip Kafka package in all machines:
+    - `cd /opt/wget http://mirror.fibergrid.in/apache/kafka/0.10.0.1/kafka_2.11-0.10.0.1.tgz`
+    -  `tar -zxvf kafka_2.11-0.10.0.1.tgz`
+
+- [ ] Configure `server.properties` file in all machines:
+    - `cd kafka_2.11-0.10.0.1/config/`
+    - `vi server.properties`
+    - Change value of broker.id and zookeeper.connect:
+        - `broker.id=1 (2 in other machines)`
+        - `zookeeper.connect=192.168.9.61:2181,192.168.9.63:2181`
+- [ ] Start Kafka on each machine one by one:
+    - `bin/kafka-server-start.sh config/server.properties`
+
 [kafka-multiple-setup]:(http://www.techburps.com/misc/multi-broker-apache-kafka-cluster-setup/64)
