@@ -15,6 +15,6 @@ JDK8 with JAVA_HOME pointing to it
 
 **1. Apache Zookeeper - Cluster setup**
 
-[ ] Download a stable version of Zookeeper: `wget http://mirrors.advancedhosters.com/apache/zookeeper/zookeeper-3.4.6/zookeeper-3.4.6.tar.gz`
+- [ ] Download a stable version of Zookeeper: `wget http://mirrors.advancedhosters.com/apache/zookeeper/zookeeper-3.4.6/zookeeper-3.4.6.tar.gz`
 
 [kafka-multiple-setup]:(http://www.techburps.com/misc/multi-broker-apache-kafka-cluster-setup/64)
