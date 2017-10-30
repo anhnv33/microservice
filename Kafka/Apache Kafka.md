@@ -121,4 +121,83 @@ In Kafka a stream processor is anything that takes continual streams of data fro
 
 - You can also set the producer config property __buffer.memory__ which default 32 MB of memory
 - The Producer blocks up to __max.block.ms__ if buffer.memory is exceeded
-- <span style="color:red">If the Producer is sending records faster than the broker can receive records, an exception is thrown.</span>
+- If the Producer is sending records faster than the broker can receive records, an exception is thrown.
+
+**Custom Serializers**
+
+```
+public class StockPriceKafkaProducer {
+
+    private static Producer<String, StockPrice>
+                                    createProducer() {
+        final Properties props = new Properties();
+        setupBootstrapAndSerializers(props);
+        ...
+        return new KafkaProducer<>(props);
+    }
+
+    private static void setupBootstrapAndSerializers(Properties props) {
+        props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG,
+                StockAppConstants.BOOTSTRAP_SERVERS);
+        props.put(ProducerConfig.CLIENT_ID_CONFIG, "StockPriceKafkaProducer");
+        props.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG,
+                StringSerializer.class.getName());
+
+
+        //Custom Serializer - config "value.serializer"
+        props.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG,
+                StockPriceSerializer.class.getName());
+
+    }
+
+}
+```
+
+```
+package com.cloudurable.kafka.producer;
+import com.cloudurable.kafka.producer.model.StockPrice;
+import org.apache.kafka.common.serialization.Serializer;
+import java.nio.charset.StandardCharsets;
+import java.util.Map;
+
+public class StockPriceSerializer implements Serializer<StockPrice> {
+
+    @Override
+    public byte[] serialize(String topic, StockPrice data) {
+        return data.toJson().getBytes(StandardCharsets.UTF_8);
+    }
+
+    @Override
+    public void configure(Map<String, ?> configs, boolean isKey) {
+    }
+
+    @Override
+    public void close() {
+    }
+}
+```
+
+```
+package com.cloudurable.kafka.producer.model;
+
+import io.advantageous.boon.json.JsonFactory;
+
+public class StockPrice {
+
+    private final int dollars;
+    private final int cents;
+    private final String name;
+    ...
+    public String toJson() {
+        return "{" +
+                "\"dollars\": " + dollars +
+                ", \"cents\": " + cents +
+                ", \"name\": \"" + name + '\"' +
+                '}';
+    }
+}
+```
+
+
+
+
