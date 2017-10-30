@@ -116,3 +116,9 @@ In Kafka a stream processor is anything that takes continual streams of data fro
 - This ack=all setting is the strongest available guarantee that Kafka provides for durability
 - This setting is even stronger with broker setting __min.insync.replicas__ which specifies the minimum number of ISRs that must acknowledge a write.
 - Most use cases will use acks=all and set a min.insync.replicas > 1
+
+**Kafka Producer: Producer Buffer Memory Size**
+
+- You can also set the producer config property __buffer.memory__ which default 32 MB of memory
+- The Producer blocks up to __max.block.ms__ if buffer.memory is exceeded
+- <span style="color:red">If the Producer is sending records faster than the broker can receive records, an exception is thrown.</span>
