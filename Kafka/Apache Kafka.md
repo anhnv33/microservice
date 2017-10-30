@@ -86,6 +86,32 @@ In Kafka a stream processor is anything that takes continual streams of data fro
 **A.Kafka Producer Send, Acks and Buffers**
 
 - Kafka Producer has a __send()__ method which is asynchonous.
+- When calling the send method adds the record to the output buffer and return right away
+- The buffer is used to batch records for efficient IO and compression (__buffer.memory__)
+- The __"all"__ acks setting ensures full commit of record to all replicas and is most durable and least fast setting
+- The Kafka Producer can automatically retry failed requests
+- The Producer has buffers of unsent records per topic partition (sized at __batch.size__)
 
+**B. Kafka Producer: Buffering and batching**
 
+- The buffers are sent as fast as broker can keep up (limited by in-flight __max.in.flight.requests.per.connection__)
+- To reduce requests count and increase throughput, set __linger.ms > 0__
 
+**C. Producer Acks**
+
+- The ack setting is set to "all" (-1), "none" (0), or "leader" (1)
+
+**Acks 0 (None)**
+
+- The acks=0 is none meaning the Producer does not wait for any ack from Kafka broker at all
+
+**Acks 1 (Leader)**
+
+- The means that the Kafka broker acknowledges that the partition leader wrote the record to its local log but responds without the partition followers confirming the write
+
+**Acks -1 (All)**
+
+- The acks=all or acks=-1 is all acknowledgment which means the leader gets write confirmation from the full set of ISRs before sending an ack back to the producer.
+- This guarantees that a record is not lost as long as one ISR remains alive
+- This ack=all setting is the strongest available guarantee that Kafka provides for durability
+- This setting is even stronger with broker setting __min.insync.replicas__ which specifies the minimum number of ISRs that must acknowledge a write.
