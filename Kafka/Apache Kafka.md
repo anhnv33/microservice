@@ -83,6 +83,9 @@ Message consumption is load balanced across all consumers in a group.
 
 In Kafka a stream processor is anything that takes continual streams of data from input topics, performs some processing on this input, and produces continual streams of data to output topics. Kafka provides a fully integrated [Streams API](https://kafka.apache.org/documentation/streams/)
 
+**A.Kafka Producer Send, Acks and Buffers**
+
+- Kafka Producer has a __send()__ method which is asynchonous.
 
 
 
