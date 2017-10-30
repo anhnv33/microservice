@@ -115,3 +115,4 @@ In Kafka a stream processor is anything that takes continual streams of data fro
 - This guarantees that a record is not lost as long as one ISR remains alive
 - This ack=all setting is the strongest available guarantee that Kafka provides for durability
 - This setting is even stronger with broker setting __min.insync.replicas__ which specifies the minimum number of ISRs that must acknowledge a write.
+- Most use cases will use acks=all and set a min.insync.replicas > 1
