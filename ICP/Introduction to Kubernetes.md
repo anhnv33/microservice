@@ -49,3 +49,17 @@ Kubernetes can manage secrets and configuration details for an application witho
 With Kubernetes and its plugins, we can automatically mount local, external, and storage solutions to the containers in a seamless manner, based on Software Defined Storage (SDS).
 - **Batch execution**
 Besides long running jobs, Kubernetes also supports batch execution.
+
+## Cloud Native Computing Foundation (CNCF)
+
+CNCF hosts a set of projects, with more to be added in the future. CNCF provides resources to each of the projects, but, at the same time, each project continues to operate independently under its pre-existing governance structure and with its existing maintainers. Currently, the following projects are part of CNCF:
+- containerd for Container Runtime
+- rkt for Container Runtime
+- Kubernetes for Container Orchestration
+- Linkerd for Service Mesh
+- gRPC for Remote Procedure Call
+- Container Network Interface (CNI) for Container Networking
+- CoreDNS for Service Discovery
+- Prometheus for Monitoring
+- OpenTracing for Tracing
+- Fluentd for Logging.
