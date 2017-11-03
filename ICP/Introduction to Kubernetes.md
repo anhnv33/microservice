@@ -24,5 +24,17 @@ Kubernetes is also referred to as k8s, as there are 8 characters between k and s
 
 Kubernetes is highly inspired by the Google Borg system, which we will explore in this chapter. It is an open source project written in the Go language, and licensed under the Apache License Version 2.0.
 
-Kubernetes was started by Google and, with its v1.0 release in July 2015, Google donated it to the Cloud Native Computing Foundation (CNCF). We will discuss more about CNCF a little later.
+Kubernetes was started by Google and, with its v1.0 release in July 2015, Google donated it to the Cloud Native Computing Foundation (CNCF).
 
+## Kubernetes Features I
+
+Kubernetes offers a very rich set of features for container orchestration. Some of its fully supported features are:
+
+- **Automatic binpacking**
+    Kubernetes automatically schedules the containers based on resource usage and constraints, without sacrificing the           availability.
+- **Self-healing**
+    Kubernetes automatically replaces and reschedules the containers from failed nodes. It also kills and restarts the           containers which do not respond to health checks, based on existing rules/policy.
+- **Horizontal scaling**
+    Kubernetes can automatically scale applications based on resource usage like CPU and memory. In some cases, it also          supports dynamic scaling based on customer metrics.
+- **Service discovery and Load balancing**
+    Kubernetes groups sets of containers and refers to them via a DNS name. This DNS name is also called a Kubernetes            service. Kubernetes can discover these services automatically, and load-balance requests between containers of a given       service.
