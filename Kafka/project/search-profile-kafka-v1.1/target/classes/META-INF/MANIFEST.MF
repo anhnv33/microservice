@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Implementation-Title: search-profile-kafka-provider-v1.1
+Implementation-Version: 1.0
+Built-By: Fresher02
+Implementation-Vendor-Id: com.five9.search.profile
+Build-Jdk: 1.8.0_144
+Implementation-URL: http://projects.spring.io/spring-boot/search-profi
+ le-kafka-provider-v1.1/
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+
