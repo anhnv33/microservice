@@ -54,4 +54,81 @@ metadata:
   uid: b4952dc3-d670-11e5-8cd0-68f728db1985
 ```
 
+### Create ConfigMaps from files
+```code
+kubectl create configmap game-config-2 --from-file=docs/user-guide/configmap/kubectl/game.properties
+```
+would produce the following ConfigMap:
+```php
+kubectl describe configmaps game-config-2
+Name:           game-config-2
+Namespace:      default
+Labels:         <none>
+Annotations:    <none>
+
+Data
+====
+game.properties:        158 bytes
+```
+You can pass in ```--from-file``` argument multiple times to create a ConfigMap from multiple data sources
+```code
+kubectl create configmap game-config-2 --from-file=docs/user-guide/configmap/kubectl/game.properties --from-file=docs/user-guide/configmap/kubectl/ui.properties
+```
+
+### Define the key to use when creating a ConfigMap from a file
+You can define a key other than the file name to use in the data section of your ConfigMap when using the ```--from-file``` argument:
+```code
+kubectl create configmap game-config-3 --from-file=<my-key-name>=<path-to-file>
+```
+
+For example:
+```code
+kubectl create configmap game-config-3 --from-file=game-special-key=docs/user-guide/configmap/kubectl/game.properties
+kubectl get configmaps game-config-3 -o yaml
+```
+
+```php
+apiVersion: v1
+data:
+  game-special-key: |
+    enemies=aliens
+    lives=3
+    enemies.cheat=true
+    enemies.cheat.level=noGoodRotten
+    secret.code.passphrase=UUDDLRLRBABAS
+    secret.code.allowed=true
+    secret.code.lives=30
+kind: ConfigMap
+metadata:
+  creationTimestamp: 2016-02-18T18:54:22Z
+  name: game-config-3
+  namespace: default
+  resourceVersion: "530"
+  selfLink: /api/v1/namespaces/default/configmaps/game-config-3
+  uid: 05f8da22-d671-11e5-8cd0-68f728db1985
+```
+### Create ConfigMaps from literal values
+You can use ```kubectl create configmap``` with the ```--from-literal``` argument to define a literal value from the command line:
+```code
+kubectl create configmap special-config --from-literal=special.how=very --from-literal=special.type=charm
+kubectl get configmaps special-config -o yaml
+```
+```php
+apiVersion: v1
+data:
+  special.how: very
+  special.type: charm
+kind: ConfigMap
+metadata:
+  creationTimestamp: 2016-02-18T19:14:38Z
+  name: special-config
+  namespace: default
+  resourceVersion: "651"
+  selfLink: /api/v1/namespaces/default/configmaps/special-config
+  uid: dadce046-d673-11e5-8cd0-68f728db1985
+```
+
+### Define Pod environemt variables using ConfigMap data
+
+
 [configmap-k8s]: <https://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-configmap>
