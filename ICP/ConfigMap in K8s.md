@@ -129,6 +129,10 @@ metadata:
 ```
 
 ### Define Pod environemt variables using ConfigMap data
+    1. Define an environment variable as a key-value pair in a ConfigMap:
+```code
+kubectl create configmap special-config --from-literal=special.how=very 
+```
 
 
 [configmap-k8s]: <https://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-configmap>
