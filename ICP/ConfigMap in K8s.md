@@ -113,7 +113,7 @@ You can use ```kubectl create configmap``` with the ```--from-literal``` argumen
 kubectl create configmap special-config --from-literal=special.how=very --from-literal=special.type=charm
 kubectl get configmaps special-config -o yaml
 ```
-```php
+```code
 apiVersion: v1
 data:
   special.how: very
@@ -129,11 +129,11 @@ metadata:
 ```
 
 ### Define Pod environemt variables using ConfigMap data
-    1. Define an environment variable as a key-value pair in a ConfigMap:
+1. Define an environment variable as a key-value pair in a ConfigMap:
 ```code
 kubectl create configmap special-config --from-literal=special.how=very 
 ```
-    2. Assign the special.how value defined in the ConfigMap to the **SPECIAL_LEVEL_KEY** environment variable in the Pod specification
+2. Assign the special.how value defined in the ConfigMap to the **SPECIAL_LEVEL_KEY** environment variable in the Pod specification
 ```code
 kubectl edit pod dapi-test-pod
 ```
@@ -158,5 +158,6 @@ spec:
               key: special.how
   restartPolicy: Never
 ```
-    3. Save the changes to the Pod specification
+3. Save the changes to the Pod specification
+    
 [configmap-k8s]: <https://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-configmap>
